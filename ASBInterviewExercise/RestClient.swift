@@ -7,7 +7,11 @@
 
 import Foundation
 
-class RestClient {
+protocol RestClientProtocol: AnyObject {
+    func apiRequest(_ request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionTask
+}
+
+class RestClient: RestClientProtocol {
     
     var session: URLSession
     
