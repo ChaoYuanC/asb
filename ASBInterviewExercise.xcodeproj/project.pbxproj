@@ -14,6 +14,11 @@
 		187F08E8289677D4009C1BF6 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F08E6289677D4009C1BF6 /* TransactionTableViewCell.swift */; };
 		187F08E9289677D4009C1BF6 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187F08E7289677D4009C1BF6 /* TransactionTableViewCell.xib */; };
 		187F08EC28967D4F009C1BF6 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F08EB28967D4F009C1BF6 /* DateFormatter.swift */; };
+		187F08F428968553009C1BF6 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187F08F328968553009C1BF6 /* Color.xcassets */; };
+		187F08F62896858B009C1BF6 /* ASBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F08F52896858B009C1BF6 /* ASBColor.swift */; };
+		187F08FA289686D4009C1BF6 /* TransactionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F08F8289686D4009C1BF6 /* TransactionDetailsViewController.swift */; };
+		187F08FB289686D4009C1BF6 /* TransactionDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187F08F9289686D4009C1BF6 /* TransactionDetailsViewController.xib */; };
+		187F08FD28969128009C1BF6 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F08FC28969128009C1BF6 /* NumberFormatter.swift */; };
 		DCF7BB0426B23DFF00AE0E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */; };
 		DCF7BB0626B23DFF00AE0E0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */; };
 		DCF7BB0826B23DFF00AE0E0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0726B23DFF00AE0E0E /* ViewController.swift */; };
@@ -52,6 +57,11 @@
 		187F08E6289677D4009C1BF6 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		187F08E7289677D4009C1BF6 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		187F08EB28967D4F009C1BF6 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		187F08F328968553009C1BF6 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		187F08F52896858B009C1BF6 /* ASBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASBColor.swift; sourceTree = "<group>"; };
+		187F08F8289686D4009C1BF6 /* TransactionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewController.swift; sourceTree = "<group>"; };
+		187F08F9289686D4009C1BF6 /* TransactionDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionDetailsViewController.xib; sourceTree = "<group>"; };
+		187F08FC28969128009C1BF6 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		DCF7BB0026B23DFE00AE0E0E /* ASBInterviewExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASBInterviewExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,19 +134,20 @@
 		187F08E0289672B5009C1BF6 /* feature */ = {
 			isa = PBXGroup;
 			children = (
-				187F08E1289672BD009C1BF6 /* Transctions */,
+				187F08EE289684BD009C1BF6 /* TransactionDetails */,
+				187F08E1289672BD009C1BF6 /* Transaction */,
 			);
 			path = feature;
 			sourceTree = "<group>";
 		};
-		187F08E1289672BD009C1BF6 /* Transctions */ = {
+		187F08E1289672BD009C1BF6 /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
 				187F08ED289683F8009C1BF6 /* unittests */,
 				DCF7BB0726B23DFF00AE0E0E /* ViewController.swift */,
 				187F08E2289672DD009C1BF6 /* ViewControllerPresenter.swift */,
 			);
-			path = Transctions;
+			path = Transaction;
 			sourceTree = "<group>";
 		};
 		187F08E42896779B009C1BF6 /* Views */ = {
@@ -160,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				187F08EB28967D4F009C1BF6 /* DateFormatter.swift */,
+				187F08F52896858B009C1BF6 /* ASBColor.swift */,
+				187F08FC28969128009C1BF6 /* NumberFormatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -169,6 +182,15 @@
 			children = (
 			);
 			path = unittests;
+			sourceTree = "<group>";
+		};
+		187F08EE289684BD009C1BF6 /* TransactionDetails */ = {
+			isa = PBXGroup;
+			children = (
+				187F08F8289686D4009C1BF6 /* TransactionDetailsViewController.swift */,
+				187F08F9289686D4009C1BF6 /* TransactionDetailsViewController.xib */,
+			);
+			path = TransactionDetails;
 			sourceTree = "<group>";
 		};
 		DCF7BAF726B23DFE00AE0E0E = {
@@ -203,6 +225,7 @@
 				DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */,
 				DCF7BB0926B23DFF00AE0E0E /* Main.storyboard */,
 				DCF7BB0C26B23E0200AE0E0E /* Assets.xcassets */,
+				187F08F328968553009C1BF6 /* Color.xcassets */,
 				DCF7BB0E26B23E0200AE0E0E /* LaunchScreen.storyboard */,
 				DCF7BB1126B23E0200AE0E0E /* Info.plist */,
 				DCF7BB3626B23EB800AE0E0E /* RestClient.swift */,
@@ -338,10 +361,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187F08FB289686D4009C1BF6 /* TransactionDetailsViewController.xib in Resources */,
 				DCF7BB1026B23E0200AE0E0E /* LaunchScreen.storyboard in Resources */,
 				DCF7BB0D26B23E0200AE0E0E /* Assets.xcassets in Resources */,
 				187F08E9289677D4009C1BF6 /* TransactionTableViewCell.xib in Resources */,
 				DCF7BB0B26B23DFF00AE0E0E /* Main.storyboard in Resources */,
+				187F08F428968553009C1BF6 /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,10 +395,13 @@
 				187F08EC28967D4F009C1BF6 /* DateFormatter.swift in Sources */,
 				DCF7BB0826B23DFF00AE0E0E /* ViewController.swift in Sources */,
 				187F08D028965180009C1BF6 /* Transaction.swift in Sources */,
+				187F08FA289686D4009C1BF6 /* TransactionDetailsViewController.swift in Sources */,
 				DCF7BB0426B23DFF00AE0E0E /* AppDelegate.swift in Sources */,
 				187F08D42896549B009C1BF6 /* TransactionListProvider.swift in Sources */,
+				187F08F62896858B009C1BF6 /* ASBColor.swift in Sources */,
 				DCF7BB0626B23DFF00AE0E0E /* SceneDelegate.swift in Sources */,
 				DCF7BB3926B23ED000AE0E0E /* DIManager.swift in Sources */,
+				187F08FD28969128009C1BF6 /* NumberFormatter.swift in Sources */,
 				187F08E8289677D4009C1BF6 /* TransactionTableViewCell.swift in Sources */,
 				187F08E3289672DD009C1BF6 /* ViewControllerPresenter.swift in Sources */,
 			);

@@ -55,6 +55,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let transaction = presenter.transaction(with: indexPath.row) else {
+            return
+        }
+
+        let transactionDetails = TransactionDetailsViewController()
+        transactionDetails.transaction = transaction
+        self.present(UINavigationController(rootViewController: transactionDetails), animated: true, completion: nil)
+    }
 }
 
 extension ViewController: ViewControllerPresenterView {

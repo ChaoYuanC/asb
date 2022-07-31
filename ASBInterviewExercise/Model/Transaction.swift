@@ -13,4 +13,16 @@ struct Transaction: Decodable {
     let summary: String
     let debit: Decimal
     let credit: Decimal
+    
+    var debitString: String? {
+        return NumberFormatter.transactionDecimalFormatter().string(for: debit)
+    }
+    
+    var creditString: String? {
+        return NumberFormatter.transactionDecimalFormatter().string(for: credit)
+    }
+    
+    var gstString: String? {
+        return NumberFormatter.transactionDecimalFormatter().string(for: debit * 0.15)
+    }
 }
